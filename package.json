@@ -1,0 +1,10 @@
+{
+    "name": "thrivehub-generator",
+    "version": "1.0.0",
+    "description": "Generates HTML URLs using the ThriveHub API",
+    "main": "index.js",
+    "dependencies": {
+      "node-fetch": "^3.0.0"
+    }
+  }
+  
