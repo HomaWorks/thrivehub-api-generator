@@ -23,7 +23,7 @@ const intervalId = setInterval(() => {
     return;
   }
 
-  fetch('https://webapi.daveonlittlejo1.repl.co/generate', {
+  fetch('https:/thrivehub.destools.ink/generate', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
