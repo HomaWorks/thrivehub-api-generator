@@ -1,6 +1,4 @@
 const htmlContent = '<html><body><h1>Hello, World!</h1></body></html>';
-const fetch = require('node-fetch');
-
 let count = 0
 
 const intervalId = setInterval(() => {
