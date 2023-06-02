@@ -1,5 +1,7 @@
+const axios = require('axios');
+
 const htmlContent = '<html><body><h1>Hello, World!</h1></body></html>';
-let count = 0
+let count = 0;
 
 const intervalId = setInterval(() => {
   if (count >= 1) {
@@ -7,16 +9,9 @@ const intervalId = setInterval(() => {
     return;
   }
 
-  fetch('https:/thrivehub.destools.ink/generate', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ htmlContent: htmlContent })
-  })
-    .then(response => response.text())
-    .then(url => {
-      console.log(`Generated URL: ${url}`);
+  axios.post('https:/thrivehub.destools.ink/generate', { htmlContent })
+    .then(response => {
+      console.log(`Generated URL: ${response.data}`);
     })
     .catch(error => console.log(error));
 
